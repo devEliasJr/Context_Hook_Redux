@@ -2,11 +2,7 @@ import { Box, Button, FormControl, Paper, TextField } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useUserApi from "../hooks/useUserApi";
-// import { useUserContext } from "../Contexts/dataContext";
 
-// type IFormProps = {
-//   CreateNewUser: (userData: any) => Promise<void>
-// }
 
 export default function FormComponent(/*{CreateNewUser}: IFormProps*/) {
   const [name, setName] = useState("");
@@ -14,7 +10,7 @@ export default function FormComponent(/*{CreateNewUser}: IFormProps*/) {
 
   const navigate = useNavigate();
 
-  // const { createNewPost } = useUserContext();
+
   const { CreateNewUser } = useUserApi();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
